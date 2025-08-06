@@ -43,11 +43,11 @@ export default function RideList(){
         {rides.map(r => (
           <div key={r.ride_id} className="ride-card">
             <div className="ride-route">
-              <span>{r.origin}</span>
+              <span>{r.origin}</span> to
               <span>{r.destination}</span>
             </div>
             <div className="ride-price">
-              ${r.price}
+              Rs. {r.price}
             </div>
             <div className="ride-details">
               <div className="ride-detail">
