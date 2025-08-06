@@ -1,23 +1,52 @@
+# Campus Carpool
 
-# Campus Carpool Starter (Auth + Realtime Chat)
+A simple web app for university students to share rides.
 
-**What's included**
-- Frontend (React + Vite) with Supabase Auth integration and Supabase Realtime chat subscription
-- Backend (Express) using Supabase JS for DB operations (rides, requests)
-- Supabase SQL schema (supabase_schema.sql)
-- .env.example files and instructions
+## Features
+- User login/signup
+- Post and browse rides
+- Real-time chat
 
-**How to use (quick)**
-1. Create a Supabase project at https://app.supabase.com
-2. Run `supabase_schema.sql` in the SQL editor to create tables.
-3. In Supabase → Settings → API get `SUPABASE_URL` and `SUPABASE_ANON_KEY`.
-   - For server use, create a `SERVICE_ROLE` key and store it on the backend only.
-4. Fill `.env` files from `.env.example` in `frontend` and `backend`.
-5. Install & run locally:
-   - Backend: `cd backend && npm install && npm run dev`
-   - Frontend: `cd frontend && npm install && npm run dev`
-6. Visit the frontend dev URL (usually http://localhost:5173)
+## Tech Stack
+- **Frontend**: React, Vite
+- **Backend**: Node.js, Express
+- **Database**: Supabase
 
-**Notes**
-- This is a starter scaffold. Add validation, security checks, and production settings before deploying.
-- Realtime chat uses Supabase Realtime on the `Chat` table. The frontend subscribes to inserts.
+## Quick Start
+
+1. **Install dependencies**
+   ```bash
+   cd backend && npm install
+   cd frontend && npm install
+   ```
+
+2. **Set up Supabase**
+   - Create project at [supabase.com](https://supabase.com)
+   - Run `supabase_schema.sql` in SQL editor
+   - Add environment variables to `.env` files
+
+3. **Start the app**
+   ```bash
+   # Terminal 1
+   cd backend && npm start
+   
+   # Terminal 2  
+   cd frontend && npm run dev
+   ```
+
+4. **Open** http://localhost:5173
+
+## Environment Variables
+
+**Frontend (.env)**
+```
+VITE_SUPABASE_URL=your_url
+VITE_SUPABASE_ANON_KEY=your_key
+```
+
+**Backend (.env)**
+```
+SUPABASE_URL=your_url
+SUPABASE_ANON_KEY=your_key
+PORT=3001
+``` 
