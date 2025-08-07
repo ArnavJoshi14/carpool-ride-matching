@@ -38,7 +38,7 @@ app.post("/rides/:rideId/requests", async (req, res) => {
   res.json(data);
 });
 
-// Basic chat write endpoint (optional: clients can insert directly using Supabase client)
+// Basic chat
 app.post("/chat", async (req, res) => {
   const { ride_id, sender_id, message } = req.body;
   const { data, error } = await supabase.from("Chat").insert([{ ride_id, sender_id, message }]).select().single();
